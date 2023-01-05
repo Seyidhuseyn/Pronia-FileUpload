@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Sponsor-Index";
+}
+@model IEnumerable<Sponsor>
+
+<div class="container">
+    <a class="btn btn-primary my-3" asp-action="Sponsor">Sponsor</a>
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>ImageUrl</th>
+                <th>Order</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.ImageUrl</td>
+                    <td>@item.Order</td>
+                    <td><a asp-action=""></a></td>
+                    <td></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
