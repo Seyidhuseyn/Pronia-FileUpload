@@ -15,7 +15,7 @@ namespace WebApplication1.Areas.Manage.Controllers
         }
         public IActionResult Index()
         {
-            return View(_context.Sliders.OrderByDescending(s=>s.Order));
+            return View(_context.Sliders.ToList());
         }
         public IActionResult Create()
         {
